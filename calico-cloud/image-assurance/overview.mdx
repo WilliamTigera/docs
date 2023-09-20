@@ -33,12 +33,14 @@ Scanned image content includes:
 
 The Image Assurance scanner can be used to scan images using the following methods with the option to send results to the Manager UI or API.
 
-| **Method**                                               | **What images? Where?**                                      | **Benefit**                                                  |
-| -------------------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| Scan all images in a Kubernetes cluster                  | Any running image in the Kubernetes cluster including locally-built first-party images to fix critical bugs. | Provides defense-in-depth coverage and an easy way to get started with vulnerability scanning and remediation. |
-| Integrate Image Assurance scanner in your build pipeline | Images in your application build pipeline and private registeries including:   <br />- Customer-built images<br />- Local images<br />- Third-party images from public registries (for example Kafka, reddis) | Incorporate the IA scanner as a lightweight runner in your build pipeline, and use the scanner offline and on-demand for ad hoc scanning and emergency patching. |
+| **Scan images in...** | Description                                                  | **Benefit**s                                                 |
+| --------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| Kubernetes cluster    | Scan any running image in the Kubernetes cluster including locally-built first-party images to fix critical bugs. | Provides an easy way to get started with vulnerability scanning and remediation, and defense-in-depth coverage without building your own scanning solution. |
+| CI/CD pipeline        | Integrate the scanner in your application build pipeline and private registries including: <br />- Customer-built images<br />- Local images<br />- Third-party images from public registries (for example Kafka, reddis) | Incorporate the scanner as a lightweight runner in your build pipeline. Use the scanner offline and on-demand for ad hoc scanning and emergency patching. |
+| Image registries      | Scan images in registries (for example, Amazon ECR).         | Add a layer of defense for images that don’t go through a pipeline (for example, third-party images), but are published to registries. If a CVE is missed, you can catch it before it is deployed. |
 
 ## Next steps
 
-- Start image scanning using [CLI scanner](./scanners/pipeline-scanner) or [enable automatic image scanning](./scanners/cluster-scanner) inside a cluster using cluster scanner.
-- [Set up alerts on vulnerabilities](./set-up-alerts)
+- Start image scanning
+  - [In-cluster scanner](./scanners/pipeline-scanner)
+  - [CI/CD pipeline scanner](./scanners/cluster-scanner)

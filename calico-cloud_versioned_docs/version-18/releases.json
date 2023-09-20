@@ -244,6 +244,11 @@
         "version": "master",
         "registry": "quay.io"
       },
+      "image-assurance": {
+        "image": "tigera/image-assurance",
+        "version": "master",
+        "registry": "quay.io"
+      },
       "csi-driver": {
         "image": "calico/csi",
         "version": "master",
